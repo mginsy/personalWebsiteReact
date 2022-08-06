@@ -1,61 +1,30 @@
 :root {
-  --background-color: #b9d3c4;
-  --wild-color: #76c5d3;
-  --navbar-color: #5E454B;
-  --text-color: rgb(255, 255, 255);
-  --main-color: #5E454B;
-  --nav-link-color: #D8B384;
-  --nav-brand-color: #F3F0D7;
-  --highlight-color: #d67c21;
-  --footer-color: rgb(0, 0, 0);
+  --background-color: #f5e9c0;
+  --wild-color: #76C5D3;
+  --navbar-color: rgba(45, 66, 33, .5);
+  --text-color: #000;
+  --main-color: #FAAB5B;
+  --nav-link-color: #d7f1ec;
+  --nav-link-brand-color: #87c7cd;
+  --highlight-color: #2d4221;
+  --footer-color: #fff;
+  --cololkfjdlfkdjsjklfd: #95dd83;
 }
 
 @font-face {
-  font-family: Stanley;
-  src: url("fonts/Stanley.otf") format("opentype");
+  font-family: Hiatus;
+  src: url("./fonts/Hiatus-MVJnw.otf") format("opentype");
 }
 
 @font-face {
-  font-family: Butler_Regular;
-  src: url("fonts/Butler_Regular.otf") format("opentype");
+  font-family: PatrickHand;
+  src: url("./fonts/PatrickHand-Regular.ttf") format("opentype");
 }
 
-@font-face {
-  font-family: Butler_Regular_Stencil;
-  src: url("fonts/Butler_Regular_Stencil.otf") format("opentype");
-}
 
-@font-face {
-  font-family: Butler_Bold;
-  src: url("fonts/Butler_Bold.otf") format("opentype");
-}
 
-@font-face {
-  font-family: Butler_Medium;
-  src: url("fonts/Butler_Medium.otf") format("opentype");
-}
+/*--navbar-color: #2d4221;*/
 
-@font-face {
-  font-family: Butler_Black;
-  src: url("fonts/Butler_Black.otf") format("opentype");
-}
-
-@font-face {
-  font-family: Cormorant-Regular;
-  src: url("fonts/Cormorant-Regular.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: Cormorant-Bold;
-  src: url("fonts/Cormorant-Bold.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: Cormorant-Italic;
-  src: url("fonts/Cormorant-Italic.ttf") format("opentype");
-}
-
-/* rgba(185, 211, 196, .5) */
 html {
   height: 100%;
   width: 100%;
@@ -64,7 +33,7 @@ html {
 
 html,
 body {
-  font-family: "Butler_Regular","Poppins", Helvetica, Arial, sans-serif;
+  font-family: "PatrickHand","Poppins", Helvetica, Arial, sans-serif;
   height: 100%;
   width: 100%;
   background-color: var(--background-color);
@@ -105,148 +74,116 @@ a {
   color: var(--main-color);
 }
 
-.menuTitle{
-  font-family:'Cormorant-Bold' !important;
-  font-size: 21px !important;
-}
-.menuTitleMobile{
-  font-family:'Cormorant-Bold' !important;
-  font-size: 14px !important;
-}
-.menuTitleSmall{
-  font-family:'Cormorant-Bold' !important;
-}
-.menuOptionSelected{
-  font-family:'Cormorant-Bold' !important;
-  font-size: 21px !important;
-  font:'#616056' !important;
-}
-.menuOptionSelectedMobile{
-  font-family:'Cormorant-Bold' !important;
-  font-size: 16px !important;
-  font:'#616056' !important;
+
+.homeContainer{
+  justify-content: center;
+  align-items: center;
+  vertical-align:middle;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height:95%;
 }
 
-.menuOptionList{
-  font-family:'Cormorant-Regular' !important;
-  font-size: 20px !important;
-}
-.menuOptionListMobile{
-  font-family:'Cormorant-Regular' !important;
-  font-size: 20px !important;
-}
-
-.infoText{
-  font-family:'Cormorant-Regular' !important;
-  font-size: 20px !important;
-}
-.infoTextMobile{
-  font-family:'Cormorant-Regular' !important;
-  font-size: 15px !important;
-  padding-right:10px;
+.PortfolioContainer{
+  padding-top:4%;
+  justify-content: center;
+  align-items: center;
+  vertical-align:middle;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height:95%;
 }
 
-.buttonTitle{
-  font-family:'Butler_Regular' !important
+.expCol{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
+
+.contactRow{
+  width:70%;
+  justify-content: center;
+  padding-bottom: 6%;
+}
+
+.firstContactRow{
+  padding-top:10%;
+}
+
+.contactCol{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.test{
+  justify-content: center;
+  text-align: center;
+  padding-top: 20%;
+}
+
+.btn-huge {
+  padding: 5rem 10rem;
+  font-size: 1.5rem;
+}
+
 .buttonTitleBold{
-  font-family:'Butler_Bold' !important
+  font-size: 30;
+  font-family: "PatrickHand";
 }
 
-.restaurantRegularText{
-  font-family:'Cormorant-Regular';
+.patientProgress{
+  padding-top: 7%;
 }
 
-.mapRec{
-  font-size: 50 !important
+.calendar-container{
+  padding-top: 20%;
 }
 
-.font-link {
-  font-family: 'Stanley';
-  font-weight: normal;
-  font-size: 23px;
-  color: '#F3F0D7' !important;
+.schText{
+  padding-top: 45%;
 }
 
-.font-link-mobile {
-  font-family: 'Stanley';
-  font-weight: normal;
-  font-size: 17px;
-  color: '#F3F0D7' !important;
+.aboutTitle{
+  padding-top: 1.5%;
 }
 
-.home-brand {
-  font-family: 'Stanley';
-  font-weight: normal;
-  color: '#F3F0D7';
+.HDTW{
+  padding-bottom: 2%;
 }
 
-.homeBrandDiv{
+.HDTWrow{
+  padding-top: 4%;
+}
+
+.HTDWtitle{
+  padding-top: 75%;
+}
+
+.selector{
+  padding-top:2%;
+}
+
+.about{
+  background-color: var(--wild-color);
+}
+
+.scheduler{
   justify-content: center;
-  align-items: center;
   text-align: center;
-  padding-top: 50px;
-  padding-left:50px;
-  padding-right:50px;
-  width:fit-content;
-  height:fit-content;
-  border-radius: 20px;
-  background-color:rgba(185, 211, 196, .5);
+  padding-top: 15%;
 }
 
-.homeBrandDivMobile{
+.col-4{
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 10px;
-  padding-left:10px;
-  padding-right:10px;
-  width:fit-content;
-  height:fit-content;
-  border-radius: 20px;
-  background-color:rgba(185, 211, 196, .5);
-}
-
-.outerHomeBrandDiv{
-  padding-top:80px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display:flex;
-}
-
-.outerHomeBrandDivMobile{
-  padding-top:40px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display:flex;
-}
-
-.centerDivMobile{
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display:flex;
-}
-
-
-.mapfront{
-  background-color:var(--background-color);
-}
-
-.googleMapRestaurant{
-  width: 50% !important;
-  height: 50% !important;
-}
-
-.front {
-  background-position: center;
   text-align: center;
 }
 
-.FrontText {
-  padding-top: 30%;
+.frontGif{
+  width: '20%';
 }
 
 .navbar {
@@ -260,45 +197,47 @@ a {
 .navbar .navbar-brand {
   margin-left: 60px;
   margin-right: 80px;
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--nav-brand-color);
-}
-
-.navbar-brand-mobile {
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--nav-brand-color);
+  font-size: 40px;
+  font-weight: 500;
+  font-family: 'Hiatus';
+  color: var(--nav-link-brand-color);
 }
 
 .navbar .navbar-nav .nav-link {
   color: var(--nav-link-color);
   margin-right: 30px;
-  font-size: 22px;
+  font-size: 23px;
   transition: 0.25s all;
-  font-family: 'Butler_Regular_Stencil';
+}
+
+.navBarResume{
+  color: var(--nav-link-color);
+  margin-right: 30px;
+  font-size: 18px;
+  transition: 0.25s all;
 }
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link:focus,
 .navbar .navbar-nav .nav-link:focus-visible {
   transition: 0.25s all;
-  color: var(--background-color);
+  color: #415d2e;
 }
 
 .navbar .navbar-brand:hover,
 .navbar .navbar-brand:focus,
 .navbar .navbar-brand:focus-visible {
   transition: 0.25s all;
-  color: #e4e0c5;
+  color: #6aa8ad;
 }
 
-.navbar-title-text{
-  padding-top: 16%;
-  color: var(--background-color);
-  justify-content: center;
-  align-items: center;
-  font-family: 'Butler_Regular_Stencil';
+.primary {
+  background-color: var(--main-color);
+}
+
+.primaryHome{
+  position: absolute;
+  width:100%;
 }
 
 .box {
@@ -308,7 +247,7 @@ a {
   border-radius: 10%;
   margin: 1%;
   transition: box-shadow 0.3s;
-  background-color: #000000;
+  background-color: #f0ffec;
 }
 
 .square:before {
@@ -339,542 +278,8 @@ a {
   padding-left: 5%;
   margin-top: 10%;
   margin-bottom: 3%;
-  background-color: #faab5b;
+  background-color: #FAAB5B;
   border-radius: 2px;
-}
-
-.bigNoScrollContainer{
-  overflow:hidden;
-}
-
-.mapCol {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding-top:1%;
-}
-
-
-.mapStartRow {
-  padding-left:3%;
-  height:fit-content;
-  justify-content: left;
-  align-items: left;
-}
-
-
-
-.listStartRow {
-  padding-left:2%;
-  padding-top:.5%;
-  height:fit-content;
-  justify-content: space-between;
-}
-
-.listFormLastCol{
-  justify-content: center;
-  align-items: center;
-}
-
-.mapFormCol{
-  padding-top:.5%;
-  justify-content: center;
-  display: flex;
-}
-
-.lastListCol{
-  justify-content: center;
-  display: flex;
-}
-
-.mapFormColOne{
-  padding-top:.5%;
-  justify-content: center;
-  align-items: center;
-  width:min-content;
-  max-width: min-content;
-}
-
-.bigMapRow{
-  padding-top: 1%;
-}
-
-.firstListForm{
-  justify-content: left;
-  align-items: center;
-  display: flex;
-  padding-left: 1%;
-}
-
-.midListForm{
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.lastListForm{
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.listPicsBuffer{
-  padding-top:2.5%;
-}
-
-
-
-
-.mapFormRow{
-  justify-content: center;
-  align-items: center;
-}
-
-
-.rightMapRow{
-  height: fit-content;
-}
-
-.price-text{
-  font-style: italic;
-  color: #000000;
-}
-
-.restTitleText{
-  color: #000000;
-  font-size: 27px;
-}
-
-.restLocText{
-  color: #000000;
-  font-style: italic;
-  font-size: 20px;
-  font-family: "Cormorant-Bold"
-}
-
-.restLocTextMobile{
-  color: #000000;
-  font-style: italic;
-  font-size: 15px;
-  font-family: "Cormorant-Bold"
-}
-
-.topStarterText{
-  color:rgb(0, 0, 0);
-  font-size:29px;
-  font-family: 'Butler_Regular';
-}
-
-.topStarterTextMobile{
-  color:rgb(0, 0, 0);
-  font-size:22px;
-  font-family: 'Butler_Regular';
-}
-
-.starterText{
-  color:rgb(0, 0, 0);
-  font-size:20px;
-  font-family: 'Butler_Regular';
-}
-
-.about-text{
-  color:#000000;
-  font-size: 30px;
-}
-
-.link-text{
-  color: #4286f4;
-  text-decoration: underline;
-}
-
-.aboutCol{
-  padding-left:4%;
-  padding-right:2%;
-  padding-top:1%;
-  vertical-align: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-family: "Cormorant-Bold";
-}
-
-.aboutPic{
-  padding-left:2%;
-  padding-right:4%;
-  justify-content: center;
-  align-items: center;
-  vertical-align: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.homeRow{
-  justify-content: center;
-  align-items: center;
-}
-
-.homePicRow{
-  justify-content: center;
-  align-items:center;
-  flex-direction: column;
-  padding-top:3%;
-  padding-bottom:3%;
-}
-
-.homePicCol{
-  padding-top:1%;
-  justify-content: center;
-  align-items: center;
-  vertical-align: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.homeFormRow{
-  justify-content: center;
-  align-items: center;
-  vertical-align: auto;
-}
-
-.homeRecText{
-  justify-content: center;
-  align-items: center;
-  padding-right:6%;
-}
-
-.homeDropdown{
-  justify-content: center;
-  align-items: center;
-}
-
-.homeMidColPadding{
-  padding-top:50%;
-}
-
-.homeBottom{
-  padding-top: 5%;
-}
-
-.homeInCol{
-  max-width: fit-content;
-  justify-content: center;
-  align-items: center;
-  vertical-align: auto;
-  display: flex;
-}
-
-.in-between-text-home{
-  font-size:28px;
-  color:#1f1f1f;
-  padding-left:48%;
-  padding-bottom:120%;
-  font-family: 'Butler_Black';
-}
-
-.in-between-text-home-mobile{
-  font-size:18px;
-  color:#1f1f1f;
-  padding-bottom:100%;
-  font-family: 'Butler_Black';
-}
-
-
-.in-between-text-map{
-  font-size:24px;
-  color:#1f1f1f;
-  font-family: 'Butler_Black';
-}
-
-.in-between-text-map-mobile{
-  font-size:10px;
-  color:#1f1f1f;
-  font-family: 'Butler_Black';
-}
-
-.restInfo{
-  padding-top:2%;
-  padding-bottom:3%;
-}
-
-.restButton{
-  padding-left: 1%;
-}
-
-.bigRestInfo{
-  justify-content: center;
-  align-items: center;
-  vertical-align: auto;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 60px;
-}
-
-.back-text{
-  padding-top:100%;
-}
-
-.addrRow{
-  padding-top: 15%;
-  padding-right:2%;
-  justify-content: center;
-  align-items: center;
-  vertical-align: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.mapPaddingRow{
-  padding-top:1%;
-}
-
-.mapPaddingRow2{
-  padding-top:2%;
-}
-
-.mapPaddingRowMobile{
-  padding-top:5%;
-}
-
-.listPaddingRow{
-  padding-top:1%;
-}
-
-.mapRow{
-  height:500px;
-}
-
-.recCol{
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.mapColright{
-  padding-top: 15%;
-  padding-right: 4%;
-  padding-left: 2%
-}
-
-.rightRestCol{
-  justify-content: center;
-  display: flex;
-  padding-top: 5%;
-}
-
-.rightLeftCol{
-  width: 80%;
-}
-
-.rightRightCol{
-  width: 20%;
-}
-
-.inMapRow{
-  justify-content: center;
-  align-items: center;
-}
-
-.homeStartRow {
-  padding-top:36%;
-  height:fit-content;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.homeSubmitRow{
-  padding-top: 5%;
-}
-
-.listBruh{
-  padding-right: 8%;
-}
-
-.homeCreatedRow{
-  align-items:flex-end;
-}
-
-.homeCatCol{
-  padding-left: 7.5%;
-}
-
-.topHome{
-  padding-top:5%;
-}
-
-.homeSubmitCol{
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.inMapRowText{
-  text-align: left;
-  background-color:rgba(185, 211, 196, .6);
-  border-radius: 10px;
-}
-
-.map-container, .map {
-  padding-top: 20%;
-  display:flexbox;
-  justify-content: center;
- }
-
- .priceRest{
-   padding-top: 12%;
- }
-
-.RestMap{
-  width: 50% !important;
-}
-
-.listPics{
-  padding-top: .5%;
-  padding-bottom: .5%;
-}
-
-.listPicsMobile{
-  padding-top: .5%;
-  padding-bottom: .5%;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.fullMapRestaurantText{
-  text-align: left;
-  padding-left: 25%;
-  padding-right: 25%;
-  padding-top: .5%;
-}
-
-.mapAreaTitle{
-  padding-top:3%;
-}
-
-.fullListRestaurantText{
-  text-align: left; 
-  height: 25%;
-}
-
-.listList{
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.listPic{
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 5px 5px 2.5px grey;
-  aspect-ratio: 3 / 2 !important;
-}
-
-.listPicsRow{
-  object-fit: cover;
-}
-
-.listPicCol{
-  height: 5%;
-  padding-left: 2%;
-  padding-right: 2%;
-}
-
-.restLinkMoney{
-  display: flex;
-  justify-content: space-between;
-}
-
-.locRestpage{
-  justify-content:space-between;
-  padding-top: 2%;
-}
-
-.recommend-text-small{
-  color:#000000;
-  font-size:14px;
-  text-decoration: underline;
-}
-
-.recommend-text-big{
-  color:#000000;
-  font-size: 24px;
-  font-weight: 600;
-  background-color:rgba(185, 211, 196, .5);
-}
-
-.restaurant-text-big{
-  color:#000000;
-  font-size: 23px;
-  font-style: italic;
-  font-family: "cormorant-bold"
-}
-
-.lol-text-big{
-  color:#000000;
-  font-size: larger;
-}
-
-.categories-text-small{
-  color:#000000;
-  font-size:medium;
-  display:inline-block;
-  padding-right:5px;
-  font-family: "cormorant-bold"
-}
-.categoryContainer{
-  line-height: 20%;
-}
-
-.dollar-text-med{
-  color:#000000;
-  font-size: 18px;
-}
-
-.GMap{
-  padding-top:20%;
-}
-
-.in-between-text{
-  color:#1f1f1f;
-  padding-top:20%;
-  padding-left:25%;
-}
-
-.homeCol{
-  max-width: fit-content;
-}
-
-.topMapPage{
-  padding-top:13%;
-}
-
-.topListPage{
-  padding-top:5%;
-  padding-right:5%;
-  padding-left:5%;
-  display: flex;
-  justify-content: center;
-}
-
-.colLeftSquish{
-  align-items: right;
-  justify-content: right;
-}
-
-.mapRow{
-  float: center;
-  text-align: center;
-}
-
-.MapTagText{
-  color:#000000;
-}
-
-.test-text{
-  color:#1f1f1f;
-  font-family:'Cormorant-Bold';
 }
 
 .auth input {
@@ -889,50 +294,153 @@ a {
   background-color: var(--main-color);
 }
 
-.Scrollbar{
-  align-items: center;
-  justify-content: center;
+
+.react-calendar {
+  width: 350px;
+  max-width: 100%;
+  background: white;
+  border: 1px solid #a0a096;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
 }
-
-.topRowContact{
-  padding-top:8%;
-  justify-content: center;
-  align-items: center;
+.react-calendar--doubleView {
+  width: 700px;
 }
-
-.contactRow{
-  justify-content: center;
-  align-items: center;
-  padding-top:4%;
-  padding-left:15%;
-  padding-right:15%;
-}
-
-
-.contactCol{
-  justify-content: center;
-  align-items: center;
+.react-calendar--doubleView .react-calendar__viewContainer {
   display: flex;
+  margin: -0.5em;
 }
-
-.contactButton{
-  justify-content: center;
-  align-items: center;
+.react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 50%;
+  margin: 0.5em;
+}
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.react-calendar button {
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+.react-calendar__navigation {
   display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+}
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
 }
 
-.buttonText{
-  padding-top:12px;
-  font-size: 21px;
-  font-family: 'Butler_Bold'
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  padding: 2em 0.5em;
+}
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 6.6667px;
+  background: none;
+  text-align: center;
+  line-height: 16px;
 }
 
-.buttonTextMobile{
-  padding-top:7px;
-  font-size: 11px;
-  font-family: 'Butler_Bold'
+.react-calendar { 
+  width: 400px;
+  max-width: 100%;
+  background-color: #fff;
+  color: #222;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+ }
+ .react-calendar__navigation button {
+  color: #6f48eb;
+  min-width: 44px;
+  background: none;
+  font-size: 16px;
+  margin-top: 8px;
+ }
+ .react-calendar__navigation button:enabled:hover,
+ .react-calendar__navigation button:enabled:focus {
+  background-color: #f8f8fa;
+ }
+ .react-calendar__navigation button[disabled] {
+  background-color: #f0f0f0;
+ }
+ abbr[title] {
+  text-decoration: none;
+ }
+ .react-calendar__tile:enabled:hover,
+ .react-calendar__tile:enabled:focus {
+  background: #f8f8fa;
+  color: #6f48eb;
+  border-radius: 6px;
+ }
+ .react-calendar__tile--now {
+  background: #6f48eb33;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #6f48eb;
+ }
+ .react-calendar__tile--now:enabled:hover,
+ .react-calendar__tile--now:enabled:focus {
+  background: #6f48eb33;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #6f48eb;
+ }
+ .react-calendar__tile--hasActive:enabled:hover,
+ .react-calendar__tile--hasActive:enabled:focus {
+  background: #f8f8fa;
+ }
+ .react-calendar__tile--active {
+  background: #6f48eb;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+ }
+ .react-calendar__tile--active:enabled:hover,
+ .react-calendar__tile--active:enabled:focus {
+  background: #6f48eb;
+  color: white;
+ }
+ .react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #f8f8fa;
+ }
+ .react-calendar__tile--range {
+  background: #f8f8fa;
+  color: #6f48eb;
+  border-radius: 0;
+ }
+ .react-calendar__month-view__days__day--neighboringMonth {
+  color: #757575;
 }
-
+ .react-calendar__tile--rangeStart {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  background: #6f48eb;
+  color: white;
+ }
+ .react-calendar__tile--rangeEnd {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background: #6f48eb;
+  color: white;
+ }
 
 @media only screen and (max-width: 600px) {
   h1,
@@ -943,4 +451,3 @@ a {
 
 @media only screen and (max-width: 360px) {
 }
-

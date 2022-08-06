@@ -1,8 +1,14 @@
-import { Link} from 'react-router-dom'
-import { Navbar as BSNavbar, Nav } from 'react-bootstrap'
+import { useEffect } from 'react'
+import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom'
+import _ from 'lodash'
+
 import AnimatedRoutes from './AnimatedRoutes'
-import background from '../background.jpg'
-import {isMobile} from 'react-device-detect';
+import background from './nature.gif';
+import Resume from './ResumeMaxGinsberg.pdf'
+
+import { Navbar as BSNavbar, Nav } from 'react-bootstrap'
+
+//this is what creates the app in full. It creates the navbar, which connects all the pages together then creates the app itself which has all the routes to all the pages.
 
 function NavbarLink(props) {
     return (
@@ -18,24 +24,20 @@ function Navbar(props) {
 
     return (
         <BSNavbar expand="lg" {...props}>
-            <Link to="/" className={isMobile ?  "navbar-brand-mobile" : "navbar-brand"} >
-                <span className={isMobile ?  "font-link-mobile" : "font-link"}>
-                    LA Food List
-                </span>
+            <Link to="/" className="navbar-brand">
+                Max Ginsberg
             </Link>
             <BSNavbar.Toggle aria-controls="navbar-nav" />
 
             <BSNavbar.Collapse id="navbar-nav">
-                <Nav className="mr-auto">
-                    <NavbarLink to="/map">Map</NavbarLink>
-                    <NavbarLink to="/list">List</NavbarLink>
-                    <NavbarLink to="/about">About Me</NavbarLink>
-                    <NavbarLink to="/contact">Contact Me</NavbarLink>
-                </Nav>
-                <Nav>
-                    <div className='navbar-title-text'><p className='navbar-title-text'>1.2.1</p></div>
-                    
-                </Nav>
+                <>
+                    <Nav className="mr-auto">
+                        <NavbarLink to="/experience">Experience</NavbarLink>
+                        <NavbarLink to="/portfolio">Portfolio</NavbarLink>
+                        <NavbarLink to="/contact">Contact</NavbarLink>
+                        <a className="nav-item nav-link" href={Resume} target="_blank" rel="noreferrer">Resume</a>
+                    </Nav>
+                </>
             </BSNavbar.Collapse>
         </BSNavbar>
     )
@@ -51,13 +53,40 @@ const myStyle={
 };
 
 function App() {
-
     return (
         <div className ="App" style={myStyle}> 
-            <Navbar className="primary" />
-            <AnimatedRoutes/>
+            <Navbar className="primaryHome" style={{zIndex:2}}/>
+            <AnimatedRoutes />
         </div>
     )
+
+    /*
+    return (
+        <Router>
+                <Switch>
+                    <Route exact path="/">
+                        <Navbar className="primaryHome" />
+                        <Home />
+                    </Route>
+                    <Route exact path="/experience">
+                        <Navbar />
+                        <Experience />
+                    </Route>
+                    <Route exact path="/portfolio">
+                        <Navbar />
+                        <Portfolio />
+                    </Route>
+                    <Route exact path="/contact">
+                        <Navbar />
+                        <Contact />
+                    </Route>
+                    <Route exact path="/resume">
+                        <Navbar />
+                        <Resume />
+                    </Route>
+                </Switch>
+        </Router>
+    )*/
 }
 
-export default App;
+export default App

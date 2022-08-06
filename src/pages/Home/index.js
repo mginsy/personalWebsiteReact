@@ -1,84 +1,94 @@
-import { Component }from 'react';
-import * as React from 'react';
-import { Row, Col } from "react-bootstrap";
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import {Link} from 'react-router-dom';
-import Fade from '@mui/material/Fade';
-import 'simplebar-react/dist/simplebar.min.css';
+import React, { useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
-import ButtonBase from '@mui/material/ButtonBase';
-import Typography from '@mui/material/Typography';
-import {isMobile} from 'react-device-detect';
-import mapPic from './mapViewBlur.jpg'
-import listPic from './listViewBlur.jpg'
+import Timer from "react-compound-timer";
 
 
-class HomePage extends Component {
+//https://lottiefiles.com/91145-health-insurance
+//https://lottiefiles.com/9234-medicine-icon
+//https://lottiefiles.com/2649-patient-successfully-added
+//https://lottiefiles.com/61069-medicine-pills
+//https://lottiefiles.com/38255-medicine-service
 
-  state = {
-    isStart:true,
-    isFilled: false,
-    showingInfoWindow: false,  // Hides or shows the InfoWindow
-    activeMarker: {},          // Shows the active marker upon click
-    selectedPlace: {},          // Shows the InfoWindow to the selected place upon a marker
-    refreshMap: true,
-    category: "",
-    area: "",
-    screenWidth: 0,
-    screenHeight: 0,
-  };
+/*
+<div className="offset-md-1 col-md-6 my-auto">
+    <Lottie animationData={animationData} loop={ true }/>
+</div>
+*/
 
-  componentDidMount() {
-    window.addEventListener("resize", this.resize.bind(this));
-    this.resize();
+function getWindowSize() {
+    const {innerWidth, innerHeight} = window;
+    return {innerWidth, innerHeight};
 }
 
-  resize() {
-      this.setState({screenWidth: window.innerWidth,
-                    screenHeight: window.innerHeight});
-  }
+// this is the home page it is just a simple HTML page with no confusing components. It has various text, image, and youtube link objects including a lottie animation which is the pill animation on the front page
+function Home() {
 
-  componentWillUnmount() {
-      window.removeEventListener("resize", this.resize.bind(this));
-  }
+    const [show, setShow] = useState(true);
+    const [hello, setHello] = useState(true);
+    const [img, setIMG] = useState(false);
+    const [desc, setDesc] = useState(false);
+    const [explore, setExplore] = useState(false);
+    const [windowSize, setWindowSize] = useState(getWindowSize());
 
-  handleCategoryChange = (event) =>
-    {
-      let fadeSubmit = false;
-      if (this.state.area !== "" || event.target.value !== ""){
-        fadeSubmit = true;
-      }
-      this.setState({ category: event.target.value, 
-                     refreshMap: true,
-                     isFilled: fadeSubmit,
-                     isStart: false});
+    useEffect(() => {
+        function handleWindowResize() {
+          setWindowSize(getWindowSize());
+        }
+    
+        window.addEventListener('resize', handleWindowResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleWindowResize);
+        };
+      }, []);
+
+    const opacityVariants = {
+    nothing: {opacity: 0, transition: {duration: 1}},
+    filled: {opacity: 1, transition: {duration: 1.4}}
     }
 
-  handleAreaChange = (event) =>
-    {
-      let fadeSubmit = false;
-      if (this.state.category !== "" || event.target.value !== ""){
-        fadeSubmit = true;
-      }
-      this.setState({ area: event.target.value, 
-                     refreshMap: true,
-                     isFilled: fadeSubmit,
-                     isStart: false});
-    }
 
-render() {
-
-  
     return (
-      <div><p className = "test-text">home</p></div>
-    );
-  }
-
+        <>
+            <Timer initialTime={0}
+            checkpoints={[
+                {
+                time: 1600,
+                callback: () => {setShow(false)},
+                },
+                {
+                time: 2800,
+                callback: () => {setHello(false); setIMG(true); setShow(true)},
+                },
+                {
+                time: 4400,
+                callback: () => {setShow(false)},
+                },
+                {
+                time: 6000,
+                callback: () => {setIMG(false); setDesc(true); setShow(true)},
+                },
+                {
+                time: 7600,
+                callback: () => {setShow(false)},
+                },
+                {
+                time: 8800,
+                callback: () => {setDesc(false); setExplore(true); setShow(true)},
+                }]}
+            >
+            {({ start, resume, pause, stop, reset, timerState }) => (
+            <motion.div className="homeContainer"
+            exit={{opacity: 0, transition: {duration: 1}}}
+            initial={{opacity: 0}}
+            animate={show ? "filled" : "nothing"}
+            variants={opacityVariants}>
+                <h1 style={{fontSize:windowSize.innerWidth/40}}>{hello ? "Hello" : img ? "I'm Max Ginsberg, a software developer" : desc ? ", builder, cook, plant lover, and more..." : "Feel free to explore. Thank you for visiting"}</h1>
+            </motion.div>
+            )}
+            </Timer>
+        </>
+    )
 }
 
-export default HomePage
+export default Home;
