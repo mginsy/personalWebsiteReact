@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: PatrickHand;
-  src: url("./fonts/PatrickHand-Regular.ttf") format("opentype");
+  src: url("./fonts/FTP\ -\ Monreta.otf") format("opentype");
 }
 
 
@@ -197,7 +197,7 @@ a {
 .navbar .navbar-brand {
   margin-left: 60px;
   margin-right: 80px;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 500;
   font-family: 'Hiatus';
   color: var(--nav-link-brand-color);
@@ -206,7 +206,7 @@ a {
 .navbar .navbar-nav .nav-link {
   color: var(--nav-link-color);
   margin-right: 30px;
-  font-size: 23px;
+  font-size: 25px;
   transition: 0.25s all;
 }
 
