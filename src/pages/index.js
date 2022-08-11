@@ -5,6 +5,11 @@ import _ from 'lodash'
 import AnimatedRoutes from './AnimatedRoutes'
 import background from './nature.gif';
 import Resume from './ResumeMaxGinsberg.pdf'
+import {
+    faGithub,
+    faLinkedin
+  } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Navbar as BSNavbar, Nav } from 'react-bootstrap'
 
@@ -36,6 +41,11 @@ function Navbar(props) {
                         <NavbarLink to="/portfolio">Portfolio</NavbarLink>
                         <NavbarLink to="/contact">Contact</NavbarLink>
                         <a className="nav-item nav-link" href={Resume} target="_blank" rel="noreferrer">Resume</a>
+                    </Nav>
+                    <Nav>
+                        <a className="nav-item nav-link" href={"https://github.com/mginsy"} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} size="2x"/></a>
+                        <a className="nav-item nav-link" href={"https://www.linkedin.com/in/max-ginsberg-729215159/"} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} size="2x"/></a>
+                        
                     </Nav>
                 </>
             </BSNavbar.Collapse>

@@ -6,7 +6,7 @@
   --main-color: #FAAB5B;
   --nav-link-color: #d7f1ec;
   --nav-link-brand-color: #87c7cd;
-  --highlight-color: #2d4221;
+  --highlight-color: #1a2626;
   --footer-color: #fff;
   --cololkfjdlfkdjsjklfd: #95dd83;
 }
@@ -221,7 +221,7 @@ a {
 .navbar .navbar-nav .nav-link:focus,
 .navbar .navbar-nav .nav-link:focus-visible {
   transition: 0.25s all;
-  color: #415d2e;
+  color: var(--highlight-color);
 }
 
 .navbar .navbar-brand:hover,
