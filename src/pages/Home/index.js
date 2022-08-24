@@ -83,7 +83,7 @@ function Home() {
             initial={{opacity: 0}}
             animate={show ? "filled" : "nothing"}
             variants={opacityVariants}>
-                <h1 style={{fontSize:windowSize.innerWidth/40}}>{hello ? "Hello" : img ? "I'm Max Ginsberg, a software developer" : desc ? ", builder, cook, plant lover, and more..." : "Feel free to explore. Thank you for visiting"}</h1>
+                <h1 style={{fontSize:windowSize.innerWidth/40}}>{hello ? "Hello" : img ? "I'm Max Ginsberg, a software developer" : desc ? "builder, cook, plant lover, and more..." : "Feel free to explore. Thank you for visiting."}</h1>
             </motion.div>
             )}
             </Timer>
