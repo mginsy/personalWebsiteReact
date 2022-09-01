@@ -39,7 +39,7 @@ function Experience() {
                     exit={{opacity: 0, y:100, transition: {delay: .6, duration: 1} }}
                     initial={{opacity: 0, y:100}}
                     animate={{opacity: 1, y:0, transition: {duration: 1}}}>
-                        <img  src={AccLogo} style={{height:windowSize.innerHeight/4.7.toString()+'px'}} alt="AccentureLogo"/>
+                        <a href={"https://www.accenture.com/us-en"} target="_blank" rel="noreferrer"><img  src={AccLogo} style={{height:windowSize.innerHeight/4.7.toString()+'px'}} alt="AccentureLogo"/></a>
                         <h1 style={{color:'#000000', fontSize:fontSize}}>Technology Analyst</h1>
                     </motion.div>
                 </Col>
@@ -48,7 +48,7 @@ function Experience() {
                     exit={{opacity: 0, y:100, transition: {delay: .3, duration: 1} }}
                     initial={{opacity: 0, y:100}}
                     animate={{opacity: 1, y:0, transition: {delay: .3, duration: 1}}}>
-                        <img  src={EdwardsLogo} style={{height:windowSize.innerHeight/4.7.toString()+'px'}} alt="EdwardsLogo"/>
+                        <a href={"https://www.edwards.com/"} target="_blank" rel="noreferrer"><img  src={EdwardsLogo} style={{height:windowSize.innerHeight/4.7.toString()+'px'}} alt="EdwardsLogo"/></a>
                         <h1 style={{color:'#ffffff', fontSize:fontSize}}>Algorithms Intern</h1>
                     </motion.div>
                 </Col>
@@ -57,7 +57,7 @@ function Experience() {
                     exit={{opacity: 0, y:100, transition: {duration: 1} }}
                     initial={{opacity: 0, y:100}}
                     animate={{opacity: 1, y:0, transition: {delay: .6, duration: 1}}}>
-                        <img  src={MakersLogo} style={{height:windowSize.innerHeight/4.7.toString()+'px'}} alt="MakersLogo"/>
+                        <a href={"https://viterbimakers.usc.edu/"} target="_blank" rel="noreferrer"><img  src={MakersLogo} style={{height:windowSize.innerHeight/4.7.toString()+'px'}} alt="MakersLogo"/></a>
                         <h1 style={{color:'#c1280d', fontSize:fontSize}}>Director of Events</h1>
                     </motion.div>
                 </Col>
