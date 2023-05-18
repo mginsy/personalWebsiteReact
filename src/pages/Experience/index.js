@@ -42,7 +42,7 @@ function Experience() {
                     initial={{opacity: 0, y:-100, x:-100}}
                     animate={{opacity: 1, y:0, x:0, transition: {duration: 1}}}>
                         <a href={"https://www.accenture.com/us-en"} target="_blank" rel="noreferrer"><img  src={AccLogo} style={{height:windowSize.innerHeight/4.7.toString()+'px'}} alt="AccentureLogo"/></a>
-                        <h1 style={{color:'#000000', fontSize:fontSize}}>Technology Analyst</h1>
+                        <h1 style={{color:'#000000', fontSize:fontSize}}>Software Engineer</h1>
                     </motion.div>
                 </Col>
                 <Col className='expCol'>
