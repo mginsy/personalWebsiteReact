@@ -1,26 +1,12 @@
 import React, { useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import Timer from "react-compound-timer";
-
-
-//https://lottiefiles.com/91145-health-insurance
-//https://lottiefiles.com/9234-medicine-icon
-//https://lottiefiles.com/2649-patient-successfully-added
-//https://lottiefiles.com/61069-medicine-pills
-//https://lottiefiles.com/38255-medicine-service
-
-/*
-<div className="offset-md-1 col-md-6 my-auto">
-    <Lottie animationData={animationData} loop={ true }/>
-</div>
-*/
+import {isMobile} from 'react-device-detect';
 
 function getWindowSize() {
     const {innerWidth, innerHeight} = window;
     return {innerWidth, innerHeight};
 }
-
-// this is the home page it is just a simple HTML page with no confusing components. It has various text, image, and youtube link objects including a lottie animation which is the pill animation on the front page
 function Home() {
 
     const [show, setShow] = useState(true);
@@ -83,7 +69,7 @@ function Home() {
             initial={{opacity: 0}}
             animate={show ? "filled" : "nothing"}
             variants={opacityVariants}>
-                <h1 style={{fontSize:windowSize.innerWidth/40}}>{hello ? "Hello" : img ? "I'm Max Ginsberg, a software developer" : desc ? "builder, cook, plant lover, and more..." : "Feel free to explore. Thank you for visiting."}</h1>
+                <h1 style={isMobile ?  {fontSize:windowSize.innerWidth/25} : {fontSize:windowSize.innerWidth/40}}>{hello ? "Hello" : img ? "I'm Max Ginsberg, a software developer" : desc ? "builder, cook, plant lover, and more..." : "Feel free to explore. Thank you for visiting."}</h1>
             </motion.div>
             )}
             </Timer>

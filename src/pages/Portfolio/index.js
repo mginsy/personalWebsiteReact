@@ -4,6 +4,7 @@ import {Row, Col} from 'react-bootstrap';
 import { styled } from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
+import {isMobile} from 'react-device-detect';
 
 import LAFoodListPhoto from './photos/LAFoodList.PNG'
 import RxMinderPhoto from './photos/RxMinder.PNG'
@@ -179,51 +180,99 @@ function Portfolio() {
 
     let cols1 = [];
     let cols2 = [];
-
-    for (let i = 0; i < photos.length; i++){
-        let photo = photos[i]
-        let link = links[i]
-        let name = names[i]
-        
-        if (i < 3){
-            cols1.push(
-                <Col className='expCol'>
-                    <motion.div  className='expCol'
-                    exit={{opacity: 0, y:100, transition: {delay: i*.1, duration: 1} }}
-                    initial={{opacity: 0, y:100}}
-                    animate={{opacity: 1, y:0, transition: {delay: i*.1, duration: 1}}}>
-                        {createPhotoButton(ImageButton, photoWidth, photoHeight, photo, link, name)}
-                    </motion.div>
-                </Col>
-            )
-        }
-        else{
-            cols2.push(
-                <Col className='expCol'>
-                    <motion.div  className='expCol'
-                    exit={{opacity: 0, y:100, transition: {delay: i*.1, duration: 1} }}
-                    initial={{opacity: 0, y:100}}
-                    animate={{opacity: 1, y:0, transition: {delay: i*.1, duration: 1}}}>
-                        {createPhotoButton(ImageButton, photoWidth, photoHeight, photo, link, name)}
-                    </motion.div>
-                </Col>
+    let mobileRows = [];
+    
+    if (isMobile){
+        for (let i = 0; i < photos.length; i++){
+            let photo = photos[i]
+            let link = links[i]
+            let name = names[i]
+               
+            mobileRows.push(
+                <Row className='expRow'>
+                    <Col style={{maxwidth:"20%"}}>
+                        <motion.div  className='expCol'
+                        exit={{opacity: 0, x:100, transition: {delay: i*.13, duration: 1} }}
+                        initial={{opacity: 0, x:-100}}
+                        animate={{opacity: 1, x:0, transition: {delay: i*.13, duration: 1}}}>
+                            <a href={link} target="_blank" rel="noreferrer" ><p className = "mobilePortfolioText">{name}</p></a>
+                        </motion.div>
+                    </Col>
+                    <Col style={{maxwidth:"20%"}}>
+                        <motion.div  className='expCol'
+                            exit={{opacity: 0, x:100, transition: {delay: i*.13, duration: 1} }}
+                            initial={{opacity: 0, x:-100}}
+                            animate={{opacity: 1, x:0, transition: {delay: i*.13, duration: 1}}}>
+                                <a href={link} target="_blank" rel="noreferrer"><img  src={photo} style={{height:windowSize.innerHeight*(2/3)/6.0.toString()+'px',borderRadius:'10px'}} alt="AccentureLogo"/></a>
+                        </motion.div>
+                    </Col>
+                </Row>
             )
         }
     }
+    else{
+            for (let i = 0; i < photos.length; i++){
+            let photo = photos[i]
+            let link = links[i]
+            let name = names[i]
+            
+            
+            if (i < 3){
+                cols1.push(
+                    <Col className='expCol'>
+                        <motion.div  className='expCol'
+                        exit={{opacity: 0, y:100, transition: {delay: i*.1, duration: 1} }}
+                        initial={{opacity: 0, y:100}}
+                        animate={{opacity: 1, y:0, transition: {delay: i*.1, duration: 1}}}>
+                            {createPhotoButton(ImageButton, photoWidth, photoHeight, photo, link, name)}
+                        </motion.div>
+                    </Col>
+                )
+            }
+            else{
+                cols2.push(
+                    <Col className='expCol'>
+                        <motion.div  className='expCol'
+                        exit={{opacity: 0, y:100, transition: {delay: i*.1, duration: 1} }}
+                        initial={{opacity: 0, y:100}}
+                        animate={{opacity: 1, y:0, transition: {delay: i*.1, duration: 1}}}>
+                            {createPhotoButton(ImageButton, photoWidth, photoHeight, photo, link, name)}
+                        </motion.div>
+                    </Col>
+                )
+            }
+        }
+    }
+    
 
-    return (
-        <motion.div className="PortfolioContainer"
-        exit={{opacity: 0, transition: {duration: 1.6}}}
-        initial={{opacity: 0}}
-        animate={{opacity: 1, transition: {duration: 1}}}>
-            <Row style={{width:'100%', height:'50%'}}>
-                {cols1}
-            </Row>
-            <Row style={{width:'100%', height:'50%'}}>
-                {cols2}
-            </Row>
-        </motion.div>
-    )
+    if (isMobile){
+        return (
+            <motion.div className="PortfolioContainerMobile"
+            exit={{opacity: 0, transition: {duration: 1.6}}}
+            initial={{opacity: 0}}
+            animate={{opacity: 1, transition: {duration: 1}}}>
+                <Col>
+                    {mobileRows}
+                </Col>
+            </motion.div>
+        )
+    }
+    else{
+        return (
+            <motion.div className="PortfolioContainer"
+            exit={{opacity: 0, transition: {duration: 1.6}}}
+            initial={{opacity: 0}}
+            animate={{opacity: 1, transition: {duration: 1}}}>
+                <Row style={{width:'100%', height:'50%'}}>
+                    {cols1}
+                </Row>
+                <Row style={{width:'100%', height:'50%'}}>
+                    {cols2}
+                </Row>
+            </motion.div>
+        )
+    }
+    
 }
 
 //  <img  src={LAFoodListPhoto} style={{height:'200px'}}/>

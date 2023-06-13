@@ -83,7 +83,8 @@ a {
   justify-content: center;
   flex-direction: column;
   height:95%;
-}
+  overflow:hidden;
+}f
 
 .PortfolioContainer{
   padding-top:4%;
@@ -96,11 +97,41 @@ a {
   height:95%;
 }
 
+.PortfolioContainerMobile{
+  padding-top:30%;
+  justify-content: center;
+  align-items: center;
+  vertical-align:middle;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mobileDiv{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobilePortfolioText{
+  color: #FFF;
+  text-decoration:underline
+}
+
 .expCol{
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
+}
+
+.expRow{
+  padding-top: 4%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .contactRow{
@@ -195,9 +226,6 @@ a {
 }
 
 .navbar .navbar-brand {
-  margin-left: 60px;
-  margin-right: 80px;
-  font-size: 50px;
   font-weight: 500;
   font-family: 'Hiatus';
   color: var(--nav-link-brand-color);

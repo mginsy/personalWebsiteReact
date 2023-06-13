@@ -12,6 +12,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Navbar as BSNavbar, Nav } from 'react-bootstrap'
+import {isMobile} from 'react-device-detect';
 
 //this is what creates the app in full. It creates the navbar, which connects all the pages together then creates the app itself which has all the routes to all the pages.
 
@@ -26,10 +27,10 @@ function NavbarLink(props) {
 }
 
 function Navbar(props) {
-
+    console.log(isMobile)
     return (
         <BSNavbar expand="lg" {...props}>
-            <Link to="/" className="navbar-brand">
+            <Link to="/" className="navbar-brand" style={isMobile ? {"fontSize" : "50px", "marginLeft": "20px", "marginRight": "30px"} : {"fontSize" : "50px", "marginLeft": "60px", "marginRight": "80px"}}>
                 Max Ginsberg
             </Link>
             <BSNavbar.Toggle aria-controls="navbar-nav" />
