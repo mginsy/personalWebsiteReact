@@ -259,7 +259,7 @@ function Portfolio() {
     }
     else{
         return (
-            <motion.div className="PortfolioContainer"
+            <motion.div className="PortfolioContainer" style={{paddingTop:"5%", height:"95%"}}
             exit={{opacity: 0, transition: {duration: 1.6}}}
             initial={{opacity: 0}}
             animate={{opacity: 1, transition: {duration: 1}}}>
